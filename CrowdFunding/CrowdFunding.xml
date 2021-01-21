@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CrowdFunding</name>
+    </assembly>
+    <members>
+        <member name="M:CrowdFunding.Controllers.EndeavourController.GetEndeavors(Entities.RequestFeatures.EndeavourParameters)">
+            <summary>
+            Gets List of Endeavours
+            </summary>
+            <param name="endeavourParameters"></param>
+            <returns>List of Endeavours</returns>
+        </member>
+        <member name="M:CrowdFunding.Controllers.EndeavourController.GetEndeavor(System.Guid)">
+            <summary>
+            Gets an Endeavour by Id
+            </summary>
+            <param name="id"></param>
+            <returns>Returns endeavour if Id exists</returns>
+        </member>
+    </members>
+</doc>

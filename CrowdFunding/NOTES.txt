@@ -1,0 +1,74 @@
+﻿List of Nuget Packages Installed 
+Package										                         Project 
+Install-Package NLog.Extensions.Logging -Version 1.5.1			     LoggerService
+Install-Package Microsoft.EntityFrameworkCore						 Entities
+Install-Package Microsoft.EntityFrameworkCore.SqlServer              CrowdFunding
+Install-Package Microsoft.EntityFrameworkCore.Tools                  CrowdFunding
+Install-Package Microsoft.EntityFrameworkCore                        Entities
+Install-Package Microsoft.EntityFrameworkCore.Tools                  CrowdFunding
+Install-Package AutoMapper.Extensions.Microsoft.DependencyInjection  CrowdFunding
+Install-Package Newtonsoft.Json                                      Entities
+Install-Package Microsoft.AspNetCore.JsonPatch                       
+Install-Package Microsoft.AspNetCore.Mvc.NewtonsoftJson
+Install-Package  Microsoft.AspNetCore.Mvc.Versioning                 CrowdFunding
+Install-Package Marvin.Cache.Headers                                 CrowdFunding                                 
+(HTTP cache headers like Cach-Controle,
+Expires, Etag, and Last-Modified and also implements validation and
+expiration models)
+
+Install-Package AspNetCoreRateLimit                                 CrowdFunding
+Install-Package Microsoft.AspNetCore.Authentication.JwtBearer       CrowdFunding
+
+How to set environment variable for JWT from CMD
+setx SECRET "SecretKeyCrowdFunding" /M
+
+Install-Package Swashbuckle.AspNetCore -version 5.0.0               CrowdFunding
+==============================================Requirements========================================================
+
+Authentication & Authorization 
+As a user, I should be able to signup with my email and password. (FName, LName, Email, Phone) - Roles {
+(
+    Myself: choosing “Myself” means that you will be either withdrawing to your own bank account or withdrawing to an organization's bank account that you manage money for 
+    (You must be a financial administrator for the organization to add the organization's banking information). Do not select "Myself" and then add another individual's personal banking information. 
+
+	Someone else: Choosing "Someone else" means that you’re sending the funds to some one else’s bank account or you're sending funds to the person managing the money for an organization.
+
+	Personal or Organization: “Personal” means that an individual will be withdrawing to their own bank account. “Organization” will set a company up to add their bank account.
+)}
+As a user, I must update my profile with some basic KYC data before I can create an Endeavour (Bank Details)
+
+=======================================================================================================================
+
+Content Creation 
+As a user, I should be able to create an endeavour giving that I have valid KYC data by providing the following details. 
+ -Endeavour Type (Category)
+ -Endeavour Name 
+ -Endeavour Description 
+ -Edeavour Media (Image(s) or a Video (4min Max))
+ -Endeavour Goal Amount 
+
+ =======================================================================================================================
+
+Payments
+As a user, I should be able to donate to an endeavour and share endeavours on social media.
+As a user, I should be able to browse endeavours by category. 
+(e.g Medical, Emergency, Education, Business, Community, Competition, Event, Faith, Family, NewlyWed, Travel, Sports, Volunteer etc)
+
+
+As a user, I should be able to accept donations. 
+As a user, I should be able to thank donors.
+As a user, I should be able to withdraw funds. 
+
+
+
+Technical Notes.
+-==========================
+1. Implement HATEOS 
+2.
+
+
+So, our class now inherits from the IdentityDbContext class and not
+DbContext because we want to integrate our context with Identity.
+
+To view healthcheck visit  
+https://localhost:5001/healthchecks-ui#/healthchecks
